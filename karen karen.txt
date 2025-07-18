@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dramatic Email: Corporate Catastrophe</title>
+  <style>
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+
+    .email-container {
+      background: white;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .email-content {
+      margin-bottom: 20px;
+    }
+
+    #reply-input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #send-btn {
+      background: #4CAF50;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .result {
+      font-weight: bold;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    #hack-meter {
+      height: 20px;
+      background: red;
+      width: 0%;
+      transition: width 0.3s ease-in-out;
+    }
+
+    #meter-container {
+      width: 100%;
+      background: #ddd;
+      margin-top: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .glitch {
+      animation: glitch 0.2s infinite;
+      color: red;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0px, 0px); }
+      25% { transform: translate(2px, -1px); }
+      50% { transform: translate(-2px, 2px); }
+      75% { transform: translate(1px, -2px); }
+      100% { transform: translate(0px, 0px); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📧 Dramatic Email: Corporate Catastrophe</h1>
+
+  <div class="email-container">
+    <div class="email-content" id="email-text">
+      <p><strong>From:</strong> Karen (Department Head)</p>
+      <p><strong>Subject:</strong> Your Attitude</p>
+      <p>
+        I noticed your reply to my last message lacked a proper greeting and ended with just "Thanks." Are you aware of the company’s email tone policy?
+        Please explain your behavior.
+      </p>
+    </div>
+
+    <textarea id="reply-input" placeholder="Type your reply here..."></textarea>
+    <button id="send-btn" onclick="sendReply()">Send Reply</button>
+
+    <div id="meter-container">
+      <div id="hack-meter"></div>
+    </div>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <!-- Glitch Sound -->
+  <audio id="glitch-sound" src="https://www.fesliyanstudios.com/play-mp3/387" preload="auto"></audio>
+
+  <script>
+    const emails = [
+      {
+        sender: "Karen",
+        subject: "Your Attitude",
+        body: "I noticed your reply to my last message lacked a proper greeting and ended with just 'Thanks.' Are you aware of the company’s email tone policy? Please explain your behavior.",
+        expected: ["apologize", "sorry", "policy"]
+      },
+      {
+        sender: "HR",
+        subject: "Meme Violation",
+        body: "We've received a report about your inappropriate meme email. Would you like to clarify before we escalate?",
+        expected: ["clarify", "apologize", "explain"]
+      },
+      {
+        sender: "Karen",
+        subject: "Lunch Theft",
+        body: "Someone took my organic kale wrap. Do you have anything you’d like to confess?",
+        expected: ["no", "sorry", "wasn't", "apologize"]
